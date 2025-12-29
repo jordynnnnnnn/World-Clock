@@ -6,19 +6,29 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.6.0/moment-timezone-with-data-1970-2030.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>⏰ Jordyn's World Clock ⏰</title>
   </head>
   <body>
-    <div class="container">
-      <h1>World Clock</h1>
+    <div class="header">
+        <h1>World Clock</h1>
+        <p>Time across the globe</p>
+    </div>
 
+    <div class="container">
       <select id="city">
-        <option value="">Select a city..</option>
+        <option value="" disabledselected>Select a city..</option>
         <option value="current">My current location</option>
         <option value="Europe/London">London 🇬🇧</option>
         <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
+        <option value="America/Santiago">Santiago 🇨🇱</option>
       </select>
-      
+
       <div id="cities">
         <div class="city" id="amsterdam">
           <div>
@@ -34,11 +44,17 @@
           </div>
           <div class="time"></div>
         </div>
+        <div class="city" id="cairo">
+          <div>
+            <h2>Cairo 🇪🇬</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
       </div>
     </div>
     <footer>
-      🌏 This project was coded by <strong>Jordyn Pilcher</strong> and is open
-      sourced on <a href="#" target="_blank">GitHub</a> 🌏
+      🌏 This project was coded by <strong><a href="https://github.com/jordynnnnnnn" target="_blank">Jordyn Pilcher</strong></a> and is  open
+      sourced on <a href="https://github.com/jordynnnnnnn/World-Clock" target="_blank">GitHub</a> and hosted on <a href="" target="_blank">Vercel</a> 🌏
     </footer>
     <script src="js/index.js"></script>
   </body>

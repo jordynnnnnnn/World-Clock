@@ -1,11 +1,21 @@
 body {
-  background-color: #7dacf2;
-  font-family: sans-serif;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/886/original/10379834.png?1766991324");
+  background-position: center;
+  background-size: cover;
+  font-family: "Cause", cursive;
+}
+
+a {
+  color: #f07800;
+  text-decoration: none;
 }
 
 h1 {
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Cause", cursive;
+  font-weight: 900;
+  font-size: 48px;
+  margin: 0px;
 }
 
 h2 {
@@ -15,15 +25,37 @@ h2 {
 
 select {
   display: block;
+  background: rgba(246, 233, 223, 0.7);
   width: 100%;
   border-radius: 10px;
   padding: 10px;
+  font-family: "Cause", cursive;
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  margin: 40px 0 20px;
+}
+
+.header {
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgba(247, 209, 187, 0.7);
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.header p {
+  text-align: center;
+  margin-top: 0px;
 }
 
 .container {
   max-width: 600px;
-  margin: 60px auto;
-  background: white;
+  margin: 20px auto;
+  background: rgba(247, 209, 187, 0.7);
   padding: 30px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -33,7 +65,7 @@ select {
   display: flex;
   margin: 20px 0;
   justify-content: space-between;
-  border-bottom: 1px dashed #ddd;
+  border-bottom: 1px dashed #c4daf7;
   padding-bottom: 20px;
 }
 
@@ -56,7 +88,6 @@ select {
   line-height: 36px;
 }
 
-footer {
-  text-align: center;
-  font-size: 14px;
+.back-link {
+  font-size: 12px;
 }

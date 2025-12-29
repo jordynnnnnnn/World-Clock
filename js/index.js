@@ -22,23 +22,38 @@ function updateTime() {
       .tz("Australia/Adelaide")
       .format("h:mm:ss [<small>]A[</small>]")}`;
   }
+
+  let cairoElement = document.querySelector("#cairo");
+  if (cairoElement) {
+    let cairoDate = cairoElement.querySelector(".date");
+    let cairoTime = cairoElement.querySelector(".time");
+    cairoDate.innerHTML = moment().tz("Africa/Cairo").format("MMMM Do YYYY");
+    cairoTime.innerHTML = `${moment()
+      .tz("Africa/Cairo")
+      .format("h:mm:ss [<small>]A[</small>]")}`;
+  }
 }
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
-    let cityName = cityTimeZone.replace("_", " ").split("/")[1];
-    let cityTime = moment().tz(cityTimeZone);
-    let citiesSelect = document.querySelector("#cities");
-    citiesSelect.innerHTML = `<div class="city">
+  }
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesSelect = document.querySelector("#cities");
+  citiesSelect.innerHTML = `
+  <div class="city">
     <div>
       <h2>${cityName}</h2>
-      <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+      <div class="date">${cityTime.format("MMMM	Do YYYY")}</div>
     </div>
-    <div class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]")}</div>
-  </div>`;
-  }
+    <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
+    "A"
+  )}</small></div>
+  </div>
+  <a href="index.html" class="back-link">Back to all cities</a>
+  `;
 }
 
 setInterval(updateTime, 1000);
